@@ -12,8 +12,8 @@ async function generate() {
 
   //const posts = await fs.readdir(path.join(__dirname, '..', 'pages', 'posts'))
 
-  await Promise.all(
-    /*posts.map(async (name) => {
+  /*await Promise.all(
+    posts.map(async (name) => {
       if (name.startsWith('index.')) return
 
       const content = await fs.readFile(
@@ -29,8 +29,8 @@ async function generate() {
         categories: frontmatter.data.tag.split(', '),
         author: frontmatter.data.author
       })
-    })*/
-  )
+    })
+  )*/
 
   await fs.writeFile('./public/feed.xml', feed.xml({ indent: true }))
 }
